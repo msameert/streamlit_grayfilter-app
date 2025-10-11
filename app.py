@@ -15,7 +15,7 @@ if img is not None:
         gray = np.mean(image_arr[:, :, :3], axis=2)
  else:
         gray = image_arr 
- gray_image = Image.fromarray(gray.astype(np.uint8))
+ gray_image = Image.fromarray(gray.astype(np.uint8)) 
 
  if st.button("Convert"):
      st.image(gray_image, caption="Grayscale Image")
@@ -29,4 +29,5 @@ if img is not None:
       data=buf,
       file_name="gray_image.png",
       mime="image/png"
+
      )
